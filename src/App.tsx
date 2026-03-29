@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import { FaLinkedin, FaGithub , FaWhatsapp, FaEnvelope} from 'react-icons/fa6';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +17,7 @@ function App() {
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
         <div>
-          <h1>Olá, tudo bem? Meu nome é Bruno Carvalho, aceita um café?</h1>
+          <h1>Olá, tudo bem? Meu nome é Bruno Carvalho.</h1>
           <p>
             Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
           </p>
@@ -53,47 +54,48 @@ function App() {
             </li>
           </ul>
         </div>
+
         <div id="social">
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#social-icon"></use>
           </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
+          <h2>Contato</h2>
+          <p>Me mande uma mensagem, será um prazer te conhecer!</p>
           <ul>
             <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
+              <a href="https://github.com/BrunoCarvSo" target="_blank">
                 <svg
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
                 >
-                  <use href="/icons.svg#github-icon"></use>
+                  <FaGithub className="button-icon" />
                 </svg>
                 GitHub
               </a>
             </li>
             <li>
-              <a href="https://chat.vite.dev/" target="_blank">
+              <a href="https://www.linkedin.com/in/bruno-carvalho-80333b360/" target="_blank">
                 <svg
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
                 >
-                  <use href="/icons.svg#discord-icon"></use>
+                  <FaLinkedin className="button-icon" />
                 </svg>
-                Discord
+                LinkedIn
               </a>
             </li>
             <li>
-              <a href="https://x.com/vite_js" target="_blank">
+              <a href="https://wa.me/+5581973065923?" target="_blank">
                 <svg
                   className="button-icon"
                   role="presentation"
                   aria-hidden="true"
                 >
-                  <use href="/icons.svg#x-icon"></use>
+                  <FaWhatsapp className="button-icon" />
                 </svg>
-                X.com
+                WhatsApp
               </a>
             </li>
             <li>
@@ -103,9 +105,9 @@ function App() {
                   role="presentation"
                   aria-hidden="true"
                 >
-                  <use href="/icons.svg#bluesky-icon"></use>
+                  <FaEnvelope className="button-icon" />
                 </svg>
-                Bluesky
+                Email
               </a>
             </li>
           </ul>
