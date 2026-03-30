@@ -1,31 +1,48 @@
 //import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import { FaLinkedin, FaGithub , FaWhatsapp, FaEnvelope} from 'react-icons/fa6';
 import videoContato from './assets/videos/video_contato_boneco.mp4';
+import videoApresentacao from './assets/videos/video_boneco_acenando.mp4';
 
 function App() {
 
   return (
     <>
             
-      <section id="top">
-          <h1>Bem-vindo ao meu blog pessoal!</h1>
-      </section>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        
-          <h1>Olá, tudo bem? Meu nome é Bruno Carvalho.</h1>
-      </section>
-      <div className="ticks"></div>
-      <section id="next-steps">
+      <section id="apresentacao">
+      <div>
+        <h1>Bem-vindo ao meu portfólio!</h1>
+      </div>
+      <div >
+        <video src={videoApresentacao} autoPlay muted loop playsInline width={150}>
 
+        </video>
+      </div>
+      <div>
+        <h1>Apresentação</h1>
+      </div>
+      </section>
+      
+      <div className="ticks"></div>
+      <section id="spacer"></section>
+
+      <section id="abas">
+        <h1>
+          abas
+        </h1>
+      </section>
+
+      <div className="ticks"></div>
+      <section id="spacer"></section>
+
+      <section id="quemSouEu">
+        <h1>
+          Quem Sou Eu
+        </h1>
+      </section>
+
+
+      <section id="contato">
         <div id="center">
           <h2>Contato</h2>
           <p>Me mande uma mensagem, será um prazer te conhecer!</p>
@@ -84,9 +101,12 @@ function App() {
           <video src={videoContato} autoPlay loop muted playsInline width={125}/>
         </div>
       </section>
-
       <div className="ticks"></div>
       <section id="spacer"></section>
+      
+      <h2>
+        Footer
+      </h2>
     </>
   )
 }
