@@ -4,7 +4,7 @@ function Concact() {
     return (
         <>
         
-            <section id="contato">
+            <section id="contact" className="min-h-screen py-20">
                 <div id="center">
                     <h2>Contato</h2>
                     <p>Me mande uma mensagem, será um prazer te conhecer!</p>

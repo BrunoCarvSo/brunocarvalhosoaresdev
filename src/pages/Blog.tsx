@@ -1,13 +1,12 @@
 import HeaderBlog from "../components/HeaderBlog";
-import Navigation from "../components/Navigation";
-
 
 function Blog() {
     return (
         <>
-            <HeaderBlog/>
-            <Navigation/>
-            <h1>My blog</h1>
+            <main className="my-20">
+                <HeaderBlog/>
+                <h1>My blog</h1>
+            </main>
         </>
     )
 }

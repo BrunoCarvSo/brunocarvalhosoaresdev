@@ -1,8 +1,8 @@
-import './App.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+import Navigation from './components/Navigation';
 
 //<div className="ticks"></div>
 //<section id="spacer"></section>
@@ -10,13 +10,16 @@ function App() {
 
   return (
     <>
+      <main className="my-20">
       <BrowserRouter>
+        <Navigation/>
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/blog" element={<Blog/>} />
           </Routes>
         <Footer/>
       </BrowserRouter>
+      </main>
     </>
   )
 }
