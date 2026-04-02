@@ -8,7 +8,7 @@ function Concact() {
                 <div id="center">
                     <h2>Contato</h2>
                     <p>Me mande uma mensagem, será um prazer te conhecer!</p>
-                    <ul>
+                    <ul>   
                     <li>
                         <a href="https://github.com/BrunoCarvSo" target="_blank">
                         <svg
@@ -60,7 +60,7 @@ function Concact() {
                     </ul>
                 </div>
                 <div id="center">
-                    <video src={"public/videos/video_contato.mp4"} autoPlay loop muted playsInline width={125}/>
+                    <video src={"\\videos\\video_contato.mp4"} autoPlay loop muted playsInline width={125}/>
                 </div>
             </section>
 

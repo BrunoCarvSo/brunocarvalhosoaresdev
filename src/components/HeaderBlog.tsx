@@ -7,7 +7,7 @@ function HeaderBlog() {
                     <h1>Bem-vindo ao meu blog!</h1>
                 </div>
                 <div >
-                    <video src={"public/videos/video_codando.mp4"} autoPlay muted loop playsInline width={300}>
+                    <video src={"/videos/video_codando.mp4"} autoPlay muted loop playsInline width={300}>
 
                     </video>
                 </div>
