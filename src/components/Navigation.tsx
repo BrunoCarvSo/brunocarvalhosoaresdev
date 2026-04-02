@@ -1,12 +1,12 @@
+import {Link} from 'react-router-dom';
 
 function Navigation(){
     return (
         <>
-            <section id="abas">
-                <h1>
-                abas
-                </h1>
-            </section>
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/blog">Blog</Link>
+            </nav>
         </>
     )
 }

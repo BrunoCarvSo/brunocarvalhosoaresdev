@@ -1,9 +1,10 @@
 import './App.css'
-import AboutMe from './components/AboutMe';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
 
 //<div className="ticks"></div>
 //<section id="spacer"></section>
@@ -11,11 +12,15 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Navigation/>
-      <AboutMe/>
-      <Contact/>
-      <Footer/>
+      <BrowserRouter>
+        <Header/>
+        <Navigation/>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/blog" element={<Blog/>} />
+          </Routes>
+        <Footer/>
+      </BrowserRouter>
     </>
   )
 }
