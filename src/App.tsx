@@ -9,8 +9,8 @@ import Navigation from './components/Navigation';
 function App() {
 
   return (
-    <>
-      <main className="my-20">
+    <> 
+      <main className="my-20 bg-pblack">
       <BrowserRouter>
         <Navigation/>
           <Routes>
