@@ -6,7 +6,7 @@ import Header from '../components/Header';
 function Home() {
     return (
         <>
-            <main className="my-20 bg-gradient-to-r from-purple-900 to-purple-500">
+            <main className="my-20 bg-black text-white">
                 <Header/>
                 <AboutMe/>
                 <Contact/>
