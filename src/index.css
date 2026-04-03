@@ -7,11 +7,11 @@
 @layer base{
 
     h1 {
-    @apply text-4xl md:text-5xl font-mono tracking-tight text-white;
+    @apply text-4xl md:text-5xl font-mono tracking-tight text-white text-center;
   }
 
     h2 {
-    @apply text-2xl md:text-3xl font-light tracking-tight text-white;
+    @apply text-2xl md:text-3xl font-light tracking-tight text-white text-center my-8; 
   }
 
     p {
