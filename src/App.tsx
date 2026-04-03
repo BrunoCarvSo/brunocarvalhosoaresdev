@@ -11,17 +11,19 @@ function App() {
 
   return (
     <> 
-      <main className="my-20 bg-pblack">
+
       <BrowserRouter>
-        <Navigation/>
-          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/blog" element={<Blog/>} />
-            <Route path="/aboutMe" element={<AboutMe/>}></Route> 
-          </Routes>
-        <Footer/>
+          <main className="bg-pblack flex flex-col min-h-screen mt-20">
+            <Navigation/>
+              <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/blog" element={<Blog/>} />
+                <Route path="/aboutMe" element={<AboutMe/>}></Route> 
+              </Routes>
+            <Footer/>
+          </main>
       </BrowserRouter>
-      </main>
+
     </>
   )
 }
