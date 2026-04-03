@@ -5,7 +5,7 @@ function Header(){
             <section id="apresentation" className="flex flex-row items-center justify-between gap-8">
                 
                 <div className="w-1/4 rounded-full overflow-hidden mx-10">
-                    <img src={"\\public\\photos\\bruno_foto.jpg"} alt="Foto de Bruno Carvalho Soares" />
+                    <img src={"\\photos\\bruno_foto.jpg"} alt="Foto de Bruno Carvalho Soares" />
                 </div>
 
                 <div className="w-2/4">
