@@ -1,5 +1,6 @@
 import Contact from '../components/Contact';
 import Header from '../components/Header';
+import Tecnologies from '../components/tecnologies';
 
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
         <>
             <main className="my-20 ">
                 <Header/>
+                <Tecnologies/>
                 <Contact/>
             </main>
         </>

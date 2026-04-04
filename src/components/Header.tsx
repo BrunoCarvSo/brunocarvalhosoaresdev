@@ -4,8 +4,15 @@ function Header(){
         <>
             <section id="apresentation" className="flex flex-row items-center justify-between gap-8">
                 
-                <div className="w-1/4 rounded-full overflow-hidden mx-10">
-                    <img src={"\\photos\\bruno_foto.jpg"} alt="Foto de Bruno Carvalho Soares" />
+                <div className="relative w-1/4 mx-10">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-3xl opacity-80 animate-pulse"></div>
+
+                    <div className="relative w-full h-full rounded-full overflow-hidden shadow-xl">
+                        <img 
+                        src={"\\photos\\bruno_foto.jpg"} 
+                        alt="Foto de Bruno Carvalho Soares" 
+                        />
+                    </div>
                 </div>
 
                 <div className="w-2/4">
