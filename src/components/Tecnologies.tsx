@@ -51,14 +51,15 @@ const devopsTechs = [
   { name: "AWS", icon: BiLogoAws, color: "#FF9900" },
   { name: "Azure", icon: VscAzure, color: "#0089D6" },
   { name: "VS Code", icon: BiLogoVisualStudio, color: "#007ACC" },
-  { name: "Visual Studio", icon: DiVisualstudio, color: "#5C2D91" }, 
+  { name: "Visual Studio", icon: DiVisualstudio, color: "#ad50fa" }, 
 ];
 
 
 function Tecnologies() {
     return(
         <>
-            <section className='py-20 bg-linear-to-r from-gray-700 via-gray-800 to-gray-700 text-white mt-20'>
+            <section className='py-20 bg-linear-to-r from-gray-700 via-gray-800 to-gray-700 text-white mt-20' 
+            id='technologies'>
 
                 <div className="max-w-5xl mx-auto px-4">
                     <div className="mb-8 text-center">

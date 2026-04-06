@@ -3,7 +3,6 @@ import { FaLinkedin, FaGithub , FaRegFileLines} from 'react-icons/fa6';
 function Contact() {
     return (
         <>
-
             <div className='border'>
                 
                 <div className='text-center flex flex-col'>
@@ -11,7 +10,7 @@ function Contact() {
                     <h2 className='text-lg md:text-xl  text-gray-300 m-0'>Me mande uma mensagem, será um prazer te conhecer!</h2>
                 </div>
 
-                <div className=' text-white flex justify-center py-5 gap-10'>
+                <div className=' text-white flex justify-center py-5 gap-10' id="contact">
                     <div className='flex items-center'>   
                         <ul className='text-white flex gap-5'>
                             <li>
@@ -49,8 +48,6 @@ function Contact() {
                 </div>
 
             </div>
-
-
 
         </>
     )
