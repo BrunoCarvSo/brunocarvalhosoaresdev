@@ -7,7 +7,7 @@
 @layer base{
 
     h1 {
-    @apply text-3xl md:text-4xl font-mono font-extrabold tracking-tight text-white text-center;
+    @apply text-3xl md:text-4xl font-mono tracking-tight text-white text-center;
   }
 
     h2 {

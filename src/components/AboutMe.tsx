@@ -2,11 +2,11 @@
 function AboutMe() {
     return (
         <>  
-        
-        <section id="aboutMe" className="min-h-screen py-20">
-            <h1>
-            Quem Sou Eu
-            </h1>
+        <h1 className="font-extrabold">Sobre Mim</h1>
+        <section id="aboutMe" className="min-h-screen justify-center flex items-center">
+
+            <video src="videos\\video_construcao_componente.mp4" autoPlay muted loop width={350}></video>
+
         </section>
 
         </>

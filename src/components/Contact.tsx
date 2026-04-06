@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub , FaRegFileLines} from 'react-icons/fa6';
+import { FaLinkedin, FaGithub } from 'react-icons/fa6';
 
 function Contact() {
     return (
@@ -7,7 +7,7 @@ function Contact() {
                 
                 <div className='text-center flex flex-col'>
                     <h1 className='text-4xl m-2 font-extrabold'>Contato</h1>
-                    <h2 className='text-lg md:text-xl  text-gray-300 m-0'>Me mande uma mensagem, será um prazer te conhecer!</h2>
+                    <h2 className='text-lg md:text-xl  text-gray-300 m-0'>Siga-me e envie uma mensagem, será um prazer te conhecer!</h2>
                 </div>
 
                 <div className=' text-white flex justify-center py-5 gap-10' id="contact">
@@ -28,15 +28,6 @@ function Contact() {
                                 <FaLinkedin/>
                                 <span className='font-medium'>Linkedin</span>
                                 </a>
-                            </li>
-
-
-                            <li>
-                                <a className='flex items-center gap-2 hover:text-purple-400' href={"\\files\\curriculo_bruno_carvalho.pdf"} target="_blank" rel='noopener noreferrer'>
-                                    <FaRegFileLines/>
-                                    <span className='font-medium'>Currículo</span>
-                                </a>
-
                             </li>
 
                         </ul>
