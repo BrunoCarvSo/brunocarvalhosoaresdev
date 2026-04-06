@@ -1,70 +1,58 @@
-import { FaLinkedin, FaGithub , FaWhatsapp, FaRegFileLines} from 'react-icons/fa6';
+import { FaLinkedin, FaGithub , FaRegFileLines} from 'react-icons/fa6';
 
-function Concact() {
+function Contact() {
     return (
         <>
-        
-            <section id="contact" className="min-h-screen py-20">
-                <div id="center">
-                    <h2>Contato</h2>
-                    <p>Me mande uma mensagem, será um prazer te conhecer!</p>
-                    <ul>   
-                    <li>
-                        <a href="https://github.com/BrunoCarvSo" target="_blank">
-                        <svg
-                            className="button-icon"
-                            role="presentation"
-                            aria-hidden="true"
-                        >
-                            <FaGithub className="button-icon" />
-                        </svg>
-                        GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/bruno-carvalho-80333b360/" target="_blank">
-                        <svg
-                            className="button-icon"
-                            role="presentation"
-                            aria-hidden="true"
-                        >
-                            <FaLinkedin className="button-icon" />
-                        </svg>
-                        LinkedIn
-                        </a> 
-                    </li>
-                    <li>
-                        <a href="https://wa.me/+5581973065923?" target="_blank">
-                        <svg
-                            className="button-icon"
-                            role="presentation"
-                            aria-hidden="true"
-                        >
-                            <FaWhatsapp className="button-icon" />
-                        </svg>
-                        WhatsApp
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                        <svg 
-                            className="button-icon"
-                            role="presentation"
-                            aria-hidden="true"
-                        >
-                            <FaRegFileLines className="button-icon" />
-                        </svg>
-                        Currículo
-                        </a>
-                    </li>
-                    </ul>
+
+            <div className='border'>
+                
+                <div className='text-center flex flex-col'>
+                    <h1 className='text-4xl m-2 font-extrabold'>Contato</h1>
+                    <h2 className='text-lg md:text-xl  text-gray-300 m-0'>Me mande uma mensagem, será um prazer te conhecer!</h2>
                 </div>
-                <div id="center">
-                    <video src={"\\videos\\video_contato.mp4"} autoPlay loop muted playsInline width={125}/>
+
+                <div className=' text-white flex justify-center py-5 gap-10'>
+                    <div className='flex items-center'>   
+                        <ul className='text-white flex gap-5'>
+                            <li>
+                                <a href="https://github.com/BrunoCarvSo" target="_blank" rel='noopener noreferrer' className='flex items-center gap-2 hover:text-purple-400'>
+                                <FaGithub/>
+                                <span className='font-medium'>Github</span>
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <a href="https://www.linkedin.com/in/bruno-carvalho-80333b360/" target="_blank"
+                                rel='noopener noreferrer' className='flex items-center hover:text-purple-400 gap-2'
+                                >
+                                <FaLinkedin/>
+                                <span className='font-medium'>Linkedin</span>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a className='flex items-center gap-2 hover:text-purple-400' href={"\\files\\curriculo_bruno_carvalho.pdf"} target="_blank" rel='noopener noreferrer'>
+                                    <FaRegFileLines/>
+                                    <span className='font-medium'>Currículo</span>
+                                </a>
+
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div>
+                        <video src={"\\videos\\video_contato.mp4"} autoPlay loop muted playsInline width={100}/>
+                    </div>
                 </div>
-            </section>
+
+            </div>
+
+
 
         </>
     )
 }
-export default Concact
+export default Contact
