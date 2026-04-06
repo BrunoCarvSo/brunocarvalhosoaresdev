@@ -1,7 +1,7 @@
 import { 
   SiReact, SiJavascript, SiTypescript, SiHtml5,
   SiDotnet, SiPostgresql, SiTailwindcss,SiDocker, 
-  SiPython, SiGit, SiGithub, SiNuget
+  SiPython, SiGit, SiNuget
 } from 'react-icons/si';
 
 import { TbBrandCSharp } from "react-icons/tb";
