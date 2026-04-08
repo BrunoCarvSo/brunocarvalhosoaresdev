@@ -1,5 +1,4 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa6';
-import Button from './ui/Button';
 
 function Contact() {
     return (
@@ -11,8 +10,8 @@ function Contact() {
                     <h2 className='text-lg md:text-xl  text-gray-300 m-0'>Siga-me e envie uma mensagem, será um prazer te conhecer!</h2>
                 </div>
 
-                <div className=' text-white justify-center py-5 gap-10 grid grid-cols-1 md:grid-cols-2 ' id="contact">
-                    <div className='flex items-center'>   
+                <div className=' text-white py-5 gap-10 grid grid-cols-1 md:grid-cols-2' id="contact">
+                    <div className='flex items-center mx-20'>   
                         <ul className='text-white flex flex-col gap-5'>
                             <li>
                                 <a href="https://github.com/BrunoCarvSo" target="_blank" rel='noopener noreferrer' className='flex items-center gap-2 hover:text-purple-400'>
@@ -38,7 +37,7 @@ function Contact() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className='mx-20'>
                         <form className='flex flex-col gap-5 bg-gray-900 p-8 rounded-2xl border border-gray-600'>
 
                             {/* Campo Nome */}
