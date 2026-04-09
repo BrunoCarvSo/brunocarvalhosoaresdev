@@ -59,7 +59,7 @@ function Contact() {
                     </div>
 
                     <div className='mx-20'>
-                        <form className='flex flex-col gap-5 bg-gray-900 p-8 rounded-2xl border border-gray-600'>
+                        <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-5 bg-gray-900 p-8 rounded-2xl border border-gray-600'>
 
                             {/* Campo Nome */}
                             <div className="flex flex-col gap-2">
