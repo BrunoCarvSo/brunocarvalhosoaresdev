@@ -1,6 +1,27 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa6';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+
+    const form = useRef<HTMLFormElement>(null);
+    const [isSending, setIsSending] = useState(false);
+
+    const sendEmail = (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSending(true);
+
+        if (form.current) {
+            emailjs.sendForm('service_9h8l7qj', 'template_1m5v6s9', form.current, 'user_2XoZt3nLh0z5XyK7')
+                .then(() => {
+                    alert('Enviando mensagem...');
+                    setIsSending(false);
+                });
+        }
+    };
+
+
+
     return (
         <>
             <div className='border'>

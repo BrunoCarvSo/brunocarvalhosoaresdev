@@ -23,7 +23,7 @@ function Header(){
                 </div>
 
                 <div className="w-1/4 mx-10">
-                    <video src={"\\videos\\video_boneco_acenando.mp4"} autoPlay muted loop playsInline width={150}>
+                    <video src={"\\videos\\video_boneco_acenando.mp4"} autoPlay muted loop playsInline width={200}>
 
                     </video>
                 </div>
