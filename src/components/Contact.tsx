@@ -32,7 +32,7 @@ function Contact() {
                 </div>
 
                 <div className=' text-white py-5 gap-10 grid grid-cols-1 md:grid-cols-2' id="contact">
-                    <div className='flex items-center mx-20'>   
+                    <div className='flex items-center mx-20 justify-between'>   
                         <ul className='text-white flex flex-col gap-5'>
                             <li>
                                 <a href="https://github.com/BrunoCarvSo" target="_blank" rel='noopener noreferrer' className='flex items-center gap-2 hover:text-purple-400'>
@@ -79,8 +79,12 @@ function Contact() {
                                 <input type='text' name='message' required className='p-3 rounded-lg bg-gray-800 text-white' />
                             </div>
 
-                            <button type="submit" className='bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 rounded-lg transition-colors duration-300'>
-                                Enviar Mensagem
+                            <button type="submit" disabled={isSending} className={`mt-2 p-4 rounded-xl font-bold text-white transition-all ${
+                                isSending 
+                                    ? 'bg-gray-600 cursor-not-allowed' 
+                                    : 'bg-purple-600 hover:bg-purple-500 hover:-translate-y-1 shadow-md'
+                            }`}>
+                                {isSending ? 'Enviando Mensagem...' : 'Enviar Mensagem'}
                             </button>
 
                         </form>
