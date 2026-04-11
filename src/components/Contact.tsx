@@ -39,14 +39,14 @@ function Contact() {
                         <ul className='text-white flex flex-col gap-5'>
                             <li>
                                 <a href="https://github.com/BrunoCarvSo" target="_blank" rel='noopener noreferrer' className='flex items-center gap-2 hover:text-purple-400'>
-                                <FaGithub/>
+                                <FaGithub className="w-15 h-15"/>
                                 <span className='font-medium'>Github</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="https://www.linkedin.com/in/bruno-carvalho-80333b360/" target="_blank" rel='noopener noreferrer' className='flex items-center hover:text-purple-400 gap-2'>
-                                <FaLinkedin/>
+                                <FaLinkedin className="w-15 h-15"/>
                                 <span className='font-medium'>Linkedin</span>
                                 </a>
                             </li>
