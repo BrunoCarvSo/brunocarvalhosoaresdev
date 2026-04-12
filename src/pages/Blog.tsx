@@ -1,14 +1,14 @@
+import BlogBody from "../components/BlogBody";
+import HeaderBlog from "../components/HeaderBlog";
+
 
 
 function Blog() {
     return (
         <>
-            <main className="my-10">
-                <section id="aboutMe" className="min-h-screen justify-center flex items-center ">
-
-                    <video src="videos\\video_construcao_componente.mp4" autoPlay muted loop width={350}></video>
-
-                </section>                
+            <main className="my-10 flex flex-col gap-10">
+                    <HeaderBlog/>
+                    <BlogBody/>         
             </main>
         </>
     )

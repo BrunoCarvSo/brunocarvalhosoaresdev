@@ -1,4 +1,4 @@
-import { FaLinkedin, FaGithub } from 'react-icons/fa6';
+import { FaLinkedin, FaGithub , FaMicrosoft} from 'react-icons/fa6';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -48,6 +48,13 @@ function Contact() {
                                 <a href="https://www.linkedin.com/in/bruno-carvalho-80333b360/" target="_blank" rel='noopener noreferrer' className='flex items-center hover:text-purple-400 gap-2'>
                                 <FaLinkedin className="w-15 h-15"/>
                                 <span className='font-medium'>Linkedin</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://learn.microsoft.com/pt-br/users/brunocarvalhodev/" target="_blank" rel='noopener noreferrer' className='flex items-center hover:text-purple-400 gap-2'>
+                                    <FaMicrosoft className="w-15 h-15"/>
+                                    <span className='font-medium'>Microsoft Learn</span>
                                 </a>
                             </li>
                         </ul>

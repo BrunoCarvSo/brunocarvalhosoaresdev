@@ -93,7 +93,7 @@ function TimelineCard({ item, index }: { item: StoryItem, index: number }) {
 // 3. A SEÇÃO PRINCIPAL
 function AboutMe() {
     return (
-        <section id="about" className="py-24 bg-gray-900 relative overflow-hidden">
+        <section id="about" className="py-24 bg-gray-900 relative overflow-hidden ">
 
                 <div className="max-w-6xl mx-auto px-4 relative z-10">
                 
