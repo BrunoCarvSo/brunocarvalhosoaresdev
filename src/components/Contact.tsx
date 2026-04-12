@@ -29,12 +29,12 @@ function Contact() {
         <>
             <div className='border'>
                 
-                <div className='text-center flex flex-col'>
+                <div className='text-center flex flex-col'  id="contact">
                     <h1 className='text-4xl m-2 font-extrabold'>Contato</h1>
                     <h2 className='text-lg md:text-xl text-gray-300 m-0'>Siga-me e envie uma mensagem, será um prazer te conhecer!</h2>
                 </div>
 
-                <div className=' text-white py-5 gap-10 grid grid-cols-1 md:grid-cols-2' id="contact">
+                <div className=' text-white py-5 gap-10 grid grid-cols-1 md:grid-cols-2'>
                     <div className='flex items-center mx-20 justify-between'>   
                         <ul className='text-white flex flex-col gap-5'>
                             <li>

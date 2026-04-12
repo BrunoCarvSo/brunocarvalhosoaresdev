@@ -9,7 +9,7 @@ function Header(){
 
                     <div className="relative w-full h-full rounded-full overflow-hidden shadow-xl">
                         <img 
-                        src={"\\photos\\bruno_2.png"} 
+                        src={"\\photos\\bruno_3.png"} 
                         alt="Foto de Bruno Carvalho Soares" 
                         />
                     </div>
