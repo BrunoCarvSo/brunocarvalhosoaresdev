@@ -15,7 +15,7 @@ const blogPosts: BlogPost[] = [
     {
         id: 1,
         title: "Engenharia de Prompts",
-        coverImage: "\\public\\articles\\photos\\article1_engPrompt\\art1_capa.jpeg",
+        coverImage: "/articles/photos/article1_engPrompt/art1_capa.jpeg",
         topics: ["Engenharia de Prompt", "LLM", "Desenvolvimento de Software"],
         fileName: "article1_engPrompt.md" 
     }
