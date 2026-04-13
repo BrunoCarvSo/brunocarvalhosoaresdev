@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import Button from './ui/Button';
+import Button from './ui/Button';   
 
 function Navigation(){
     return (

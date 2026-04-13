@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { useParams, Link } from 'react-router-dom';
 
 // 1. O CONTRATO (Molde do Artigo)
 interface BlogPost {
@@ -7,7 +8,8 @@ interface BlogPost {
     title: string;
     coverImage: string;
     topics: string[];
-    fileName: string; // O nome do arquivo na pasta public/articles
+    fileName: string; 
+    slug: string;     
 }
 
 // 2. O BANCO DE DADOS (Fica aqui dentro para não sujar outros arquivos)
@@ -15,9 +17,18 @@ const blogPosts: BlogPost[] = [
     {
         id: 1,
         title: "Engenharia de Prompts",
-        coverImage: "/articles/photos/article1_engPrompt/art1_capa.jpeg",
+        coverImage: "/articles/article1/cover.jpeg",
         topics: ["Engenharia de Prompt", "LLM", "Desenvolvimento de Software"],
-        fileName: "article1_engPrompt.md" 
+        fileName: "/article1/index.md",
+        slug: "engenharia-de-prompts"
+    },
+    {
+        id: 2,
+        title: "Teste de Software",
+        coverImage: "/articles/article2/cover.png",
+        topics: ["Teste de Software", "Engenharia de Software", "Desenvolvimento de Software"],
+        fileName: "/article2/index.md",
+        slug: "teste-de-software"
     }
 ];
 
@@ -25,8 +36,10 @@ const blogPosts: BlogPost[] = [
 function BlogBody() {
     // 3. A MEMÓRIA DO COMPONENTE
     // activeArticle guarda qual artigo está aberto. Se for 'null', mostra a lista.
-    const [activeArticle, setActiveArticle] = useState<BlogPost | null>(null);
+    const { slug } = useParams();
     const [markdownContent, setMarkdownContent] = useState<string>("");
+
+    const activeArticle = slug ? blogPosts.find(post => post.slug === slug) : null ;
 
     // 4. O BUSCADOR DE ARQUIVOS (.md)
     // Roda toda vez que o activeArticle mudar
@@ -49,13 +62,10 @@ function BlogBody() {
             <div className="w-full max-w-4xl mx-auto px-4 animate-fade-in">
                 
                 {/* Botão de Voltar (Seta) */}
-                <button 
-                    onClick={() => setActiveArticle(null)} // Transforma a memória em null (volta pra lista)
-                    className="mb-8 flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors font-bold group"
-                >
+                <Link to="/blog" className="mb-8 inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors font-bold group">
                     <span className="transform group-hover:-translate-x-1 transition-transform">←</span>
                     Voltar para os artigos
-                </button>
+                </Link>
 
                 {/* Cabeçalho do Artigo (Glassmorphism) */}
                 <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl shadow-xl mb-12">
@@ -96,16 +106,23 @@ function BlogBody() {
     }
 
     // ==========================================
+    // TELA ERRO: Digitaram uma URL que não existe
+    // ==========================================
+    if (slug && !activeArticle) {
+        return <div className="text-white text-center text-2xl mt-20">Artigo não encontrado! 😢</div>;
+    }
+
+    // ==========================================
     // TELA 2: MODO LISTA (Grade de Cartões)
     // ==========================================
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 w-full">
             {blogPosts.map(post => (
-                // O botão engloba o cartão inteiro. Ao clicar, ele define o activeArticle.
-                <button 
+                // O cartão deixou de ser <button> e virou um <Link> com rota dinâmica!
+                <Link 
                     key={post.id} 
-                    onClick={() => setActiveArticle(post)}
-                    className="text-left group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/50 hover:-translate-y-2 transition-all duration-300 shadow-lg"
+                    to={`/blog/${post.slug}`}
+                    className="text-left group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/50 hover:-translate-y-2 transition-all duration-300 shadow-lg block"
                 >
                     <div className="relative h-48 overflow-hidden border-b border-white/10">
                         <img 
@@ -123,17 +140,15 @@ function BlogBody() {
                         <div className="flex flex-wrap gap-2 pt-4 border-t border-white/10">
                             <span className="text-xs text-gray-400 w-full mb-1 italic">Assuntos:</span>
                             {post.topics.map((topic, index) => (
-                                <span 
-                                    key={index}
-                                    className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-purple-900/30 text-purple-300 rounded border border-purple-500/20"
-                                >
+                                <span key={index} className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider bg-purple-900/30 text-purple-300 rounded border border-purple-500/20">
                                     {topic}
                                 </span>
                             ))}
                         </div>
                     </div>
-                </button>
+                </Link>
             ))}
         </div>
     );
-} export default BlogBody;
+} 
+export default BlogBody;

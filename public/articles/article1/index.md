@@ -34,7 +34,7 @@ A **alucinação** (preencher a resposta com coisas que não existem) é algo qu
 
 # Componentes de um Prompt
 
-![Foto 1](/articles/photos/article1_engPrompt/img2_art1.png)
+![Foto 1](/articles/article1/img1.png)
 
 São as partes/elementos que compõem o prompt:
 
@@ -65,7 +65,7 @@ São as partes/elementos que compõem o prompt:
   * São dados extras que ajudam o modelo a melhorar sua pesquisa, logo, a resposta… colocar preferências, momento temporal, informações que não são óbvias…
 
 # Técnicas de Engenharia de Prompt
-![Foto 2](/articles/photos/article1_engPrompt/img1_art1.png)
+![Foto 2](/articles/article1/img2.png)
 
 * Instruções claras
 

@@ -5,8 +5,6 @@ import Blog from './pages/Blog';
 import Navigation from './components/Navigation';
 import AboutMe from './components/AboutMe';
 
-//<div className="ticks"></div>
-//<section id="spacer"></section>
 function App() {
 
   return (
@@ -18,6 +16,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/blog" element={<Blog/>} />
+                <Route path="/blog/:slug" element={<Blog />} />
                 <Route path="/aboutMe" element={<AboutMe/>}></Route> 
               </Routes>
             <Footer/>
