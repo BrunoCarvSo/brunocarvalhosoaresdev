@@ -15,7 +15,7 @@ const storyData: StoryItem[] = [
         date: "Por que dev?",
         description: "Nascido e criado na cidade de Timbaúba, Pernambuco, minha paixão por tecnologia começou cedo. Desde pré-adolescente eu me via fascinado por computadores e como eles funcionavam, o que me levou a aprender programação por conta própria. Essa curiosidade e autodidatismo foram fundamentais para minha jornada como desenvolvedor.",
         mediaType: "image",
-        mediaSrc: "photos/bruno_infancia_computador.png"
+        mediaSrc: "/photos/bruno_infancia_computador.png"
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const storyData: StoryItem[] = [
         date: "Jornada Escolar",
         description: "Estudei toda a minha vida em escolas públicas, onde aprendi a importância da disciplina e do foco num ambiente com poucos recursos. Essas qualidades foram essenciais para que eu superasse desafios e me destacasse. No ensino médio, conquistei o 1º lugar na feira de ciências da cidade e recebi o prêmio de melhor aluno da turma por três anos consecutivos, o que reforçou meu compromisso com a excelência.",
         mediaType: "image",
-        mediaSrc: "photos/bruno_escola.png" 
+        mediaSrc: "/photos/bruno_escola.png" 
     },
     {
         id: 3,
@@ -93,14 +93,14 @@ function TimelineCard({ item, index }: { item: StoryItem, index: number }) {
 // 3. A SEÇÃO PRINCIPAL
 function AboutMe() {
     return (
-        <section id="about" className="py-24 bg-gray-900 relative overflow-hidden ">
+        <section id="about" className="py-24 bg-gray-900 relative overflow-hidden">
 
                 <div className="max-w-6xl mx-auto px-4 relative z-10">
                 
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-20" >
                         <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Sobre Mim</h2>
                         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        A jornada que me trouxe até aqui, entre códigos, rotinas e inspirações.
+                            A jornada que me trouxe até aqui, entre códigos, rotinas e inspirações.
                         </p>
                     </div>
 

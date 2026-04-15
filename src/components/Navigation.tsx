@@ -18,7 +18,7 @@ function Navigation(){
                     bg-purple-600 md:bg-transparent p-4 md:p-0 gap-4 border-b border-white md:border-none
                 `}>
                     <Button><Link onClick={() => setIsOpen(false)} to="/">Início</Link></Button>
-                    <Button><Link onClick={() => setIsOpen(false)} to="/aboutMe">Sobre Mim</Link></Button>
+                    <Button><HashLink onClick={() => setIsOpen(false)} to="/AboutMe/#about">Sobre Mim</HashLink></Button>
                     <Button><HashLink onClick={() => setIsOpen(false)} to="/#technologies">Tecnologias</HashLink></Button>
                     <Button><HashLink onClick={() => setIsOpen(false)} to="/#contact">Contato</HashLink></Button>
                     <Button><Link onClick={() => setIsOpen(false)} to="/blog">Blog</Link></Button>
