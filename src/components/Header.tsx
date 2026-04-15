@@ -1,8 +1,7 @@
 
 function Header(){
     return(
-        <>
-            <section id="apresentation" className="flex flex-row items-center justify-between gap-8">
+            <section id="apresentation" className="flex flex-col md:flex-row items-center justify-between gap-8">
                 
                 <div className="relative w-1/4 mx-10">
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-3xl opacity-80 animate-pulse"></div>
@@ -28,7 +27,6 @@ function Header(){
                     </video>
                 </div>
             </section>
-        </>
     )
 }
 export default Header

@@ -55,8 +55,8 @@ function TimelineCard({ item, index }: { item: StoryItem, index: number }) {
         <div className="hidden md:block w-5/12"></div>
 
         {/* Circulo no meio da linha do tempo */}
-        <div className="z-10 flex items-center justify-center w-10 h-10 bg-purple-600 rounded-full border-4 border-gray-900 shadow-xl shrink-0 my-4 md:my-0">
-            <div className="w-3 h-3 bg-white rounded-full"></div>
+        <div className="z-10 flex items-center justify-center w-10 h-10 md:bg-purple-600 rounded-full border-4 border-gray-900 shadow-xl shrink-0 my-4 md:my-0">
+            <div className="md:w-3 h-3 bg-white rounded-full"></div>
         </div>
 
         {/* O Cartão de Conteúdo (Aqui está o Glassmorphism) */}
@@ -108,7 +108,7 @@ function AboutMe() {
                     <div className="relative flex flex-col items-center">
                 
                             {/* A Linha Vertical Central (Fica escondida no celular e aparece no PC) */}
-                        <div className="hidden md:block absolute h-full w-1 bg-gradient-to-b from-purple-600 via-blue-600 to-gray-900 left-1/2 transform -translate-x-1/2"></div>
+                        <div className="md: hidden md:block absolute h-full w-1 bg-gradient-to-b from-purple-600 via-blue-600 to-gray-900 left-1/2 transform -translate-x-1/2"></div>
 
                     {/* Mapeando os dados para criar os cartões */}
                     {storyData.map((item, index) => (
