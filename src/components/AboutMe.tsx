@@ -59,7 +59,6 @@ function TimelineCard({ item, index }: { item: StoryItem, index: number }) {
             <div className="md:w-3 h-3 bg-white rounded-full"></div>
         </div>
 
-        {/* O Cartão de Conteúdo (Aqui está o Glassmorphism) */}
         <div className="w-full md:w-5/12 relative">
 
 
@@ -74,7 +73,6 @@ function TimelineCard({ item, index }: { item: StoryItem, index: number }) {
                 <h3 className="mb-3 text-2xl font-bold text-white">{item.title}</h3>
                 <p className="mb-6 text-gray-300 leading-relaxed">{item.description}</p>
 
-                {/* Renderização condicional da Mídia */}
                 {item.mediaType === 'image' && (
                 <img src={item.mediaSrc} alt={item.title} className="w-full h-70 object-cover rounded-xl shadow-md border border-white/5" />
                 )}
@@ -107,10 +105,8 @@ function AboutMe() {
                     {/* O Container da Linha do Tempo */}
                     <div className="relative flex flex-col items-center">
                 
-                            {/* A Linha Vertical Central (Fica escondida no celular e aparece no PC) */}
                         <div className="md: hidden md:block absolute h-full w-1 bg-gradient-to-b from-purple-600 via-blue-600 to-gray-900 left-1/2 transform -translate-x-1/2"></div>
 
-                    {/* Mapeando os dados para criar os cartões */}
                     {storyData.map((item, index) => (
                     <TimelineCard key={item.id} item={item} index={index} />
                     ))}
