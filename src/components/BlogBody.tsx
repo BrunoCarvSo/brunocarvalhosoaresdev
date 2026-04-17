@@ -105,20 +105,14 @@ function BlogBody() {
         );
     }
 
-    // ==========================================
-    // TELA ERRO: Digitaram uma URL que não existe
-    // ==========================================
     if (slug && !activeArticle) {
         return <div className="text-white text-center text-2xl mt-20">Artigo não encontrado! 😢</div>;
     }
 
-    // ==========================================
     // TELA 2: MODO LISTA (Grade de Cartões)
-    // ==========================================
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 w-full">
             {blogPosts.map(post => (
-                // O cartão deixou de ser <button> e virou um <Link> com rota dinâmica!
                 <Link 
                     key={post.id} 
                     to={`/blog/${post.slug}`}
