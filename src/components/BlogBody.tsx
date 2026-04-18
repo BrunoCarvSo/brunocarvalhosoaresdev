@@ -54,7 +54,6 @@ function BlogBody() {
     }, [activeArticle]);
 
     // TELA 1: MODO DE LEITURA (Artigo Aberto)
-    // ==========================================
     if (activeArticle) {
         return (
             <div className="w-full max-w-4xl mx-auto px-4 animate-fade-in">
