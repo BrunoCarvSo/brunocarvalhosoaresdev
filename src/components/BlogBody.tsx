@@ -53,8 +53,6 @@ function BlogBody() {
         }
     }, [activeArticle]);
 
-
-    // ==========================================
     // TELA 1: MODO DE LEITURA (Artigo Aberto)
     // ==========================================
     if (activeArticle) {
