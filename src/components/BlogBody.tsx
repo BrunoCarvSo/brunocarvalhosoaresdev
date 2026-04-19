@@ -33,7 +33,7 @@ const blogPosts: BlogPost[] = [
     {
         id: 3,
         title: "Uma visão inicial sobre alfabetos e linguagens",
-        coverImage: "/articles/article3/cover.png",
+        coverImage: "/articles/article3/cover.jpg",
         topics: ["Teoria da Computação", "Linguaguens Formais"],
         fileName: "/article3/index.md",
         slug: "alfabetos-e-linguagens"
