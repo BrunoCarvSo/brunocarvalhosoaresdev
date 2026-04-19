@@ -29,6 +29,14 @@ const blogPosts: BlogPost[] = [
         topics: ["Teste de Software", "Engenharia de Software", "Desenvolvimento de Software"],
         fileName: "/article2/index.md",
         slug: "teste-de-software"
+    },
+    {
+        id: 3,
+        title: "Uma visão inicial sobre alfabetos e linguagens",
+        coverImage: "/articles/article3/cover.png",
+        topics: ["Teoria da Computação", "Linguaguens Formais"],
+        fileName: "/article3/index.md",
+        slug: "alfabetos-e-linguagens"
     }
 ];
 
