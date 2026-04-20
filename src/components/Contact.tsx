@@ -10,8 +10,13 @@ function Contact() {
         e.preventDefault();
         setIsSending(true);
 
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+
         if (form.current) {
-            emailjs.sendForm('service_1rx5y4p', 'template_sot95if', form.current, '9S0UjsW-k5A8qgUkP')
+            emailjs.sendForm(serviceId, templateId, form.current, publicKey)
                 .then(() => {
                     alert('Mensagem enviada com sucesso!');
                     form.current?.reset();
