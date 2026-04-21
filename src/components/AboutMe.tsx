@@ -43,7 +43,7 @@ const storyData: StoryItem[] = [
     }
 ];
 
-// 2. O COMPONENTE DO CARTÃO COM EFEITO GLASSMORPHISM
+// 2. O COMPONENTE DO CARTÃO COM EFEITO  GLASSMORPHISM
 function TimelineCard({ item, index }: { item: StoryItem, index: number }) {
 
     const isEven = index % 2 === 0;
@@ -51,7 +51,7 @@ function TimelineCard({ item, index }: { item: StoryItem, index: number }) {
     return (
         <div className={`mb-15 flex flex-col items-center justify-between w-full ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
 
-        {/* Espaçador invisível para empurrar o cartão para um lado da linha no PC */}
+        {/* Espaçador invisível para empurrar o cartão para um  lado da linha no PC */}
         <div className="hidden md:block w-5/12"></div>
 
         {/* Circulo no meio da linha do tempo */}
