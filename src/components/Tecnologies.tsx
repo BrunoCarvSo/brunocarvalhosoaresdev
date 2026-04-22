@@ -1,28 +1,45 @@
+import React from 'react';
 import { 
   SiReact, SiJavascript, SiTypescript, SiHtml5,
-  SiDotnet, SiPostgresql, SiTailwindcss,SiDocker, 
+  SiDotnet, SiPostgresql, SiTailwindcss, SiDocker, 
   SiPython, SiGit, SiNuget
 } from 'react-icons/si';
-
 import { TbBrandCSharp } from "react-icons/tb";
 import { DiCss3, DiMsqlServer, DiVisualstudio } from "react-icons/di";
 import { BiLogoVisualStudio, BiLogoAws } from "react-icons/bi";
 import { VscAzure } from "react-icons/vsc";
 
+// --- COMPONENTE DE CARD COM GLASSMORPHISM ---
+function TechCard({ name, icon: Icon, color }: { name: string, icon: React.ElementType, color: string }) {
+  return (
+    <div className="group relative flex flex-col items-center justify-center p-4 h-36 w-full 
+                    rounded-2xl transition-all duration-500
+                    /* Estilo Vidro */
+                    bg-white/[0.03] backdrop-blur-md 
+                    border border-white/10 shadow-xl
+                    /* Hover Effects */
+                    hover:bg-white/[0.08] hover:border-white/20 
+                    hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10">
+      
+      {/* Reflexo interno no hover */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
-
-
-function TechCard({name, icon: Icon, color} : {name: string, icon: React.ElementType, color: string}) {
-    return(
-        <div className={'flex flex-col items-center justify-center p-4 h-36 w-full border hover:bg-gray-700 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300'}>
-
-            <Icon className="w-12 h-12 mb-5 " style={{color : color}} />
-            <span className="font-semibold text-white text-sm tracking-tight whitespace-nowrap">{name}</span>
-
-        </div>
-    );
+      <Icon 
+        className="w-12 h-12 mb-4 transition-all duration-500 group-hover:scale-110" 
+        style={{
+          color: color,
+          filter: `drop-shadow(0 0 10px ${color}44)` // Glow sutil da cor da tecnologia
+        }} 
+      />
+      
+      <span className="font-medium text-gray-300 text-sm tracking-tight text-center group-hover:text-white transition-colors">
+        {name}
+      </span>
+    </div>
+  );
 }
 
+// --- DATA ---
 const frontendTechs = [
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
@@ -54,69 +71,90 @@ const devopsTechs = [
   { name: "Visual Studio", icon: DiVisualstudio, color: "#ad50fa" }, 
 ];
 
-
+// --- COMPONENTE PRINCIPAL ---
 function Tecnologies() {
-    return(
-        <>
-            <section className='py-20 bg-linear-to-r from-gray-700 via-gray-800 to-gray-700 text-white mt-20' 
-            id='technologies'>
+  return (
+    <section 
+      className="relative py-24 bg-[#0a0c10] text-white overflow-hidden" 
+      id="technologies"
+    >
+      {/* Luzes de fundo para destacar o efeito de vidro */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -z-10"></div>
 
-                <div className="max-w-5xl mx-auto px-4">
-                    <div className="mb-8 text-center">
-                        <h1 className="font-extrabold text-center">Habilidades e Tecnologias</h1>
-                        <h2 className="text-lg md:text-xl">
-                            O que eu faço? Construo aplicações full-stack com tecnologias modernas, criando experiências de usuário completas do front-end ao back-end.
-                        </h2>
-                    </div>
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        
+        {/* Header da Seção */}
+        <div className="mb-20 text-center">
+          <h2 className="text-blue-400 font-mono text-sm tracking-[0.3em] uppercase mb-4">
+            Stack Profissional
+          </h2>
+          <h1 className="text-4xl md:text-5xl font-black mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+            Habilidades e Tecnologias
+          </h1>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+            Construo aplicações <span className="text-white font-medium">full-stack</span> com foco em arquitetura limpa, 
+            performance e escalabilidade, utilizando o que há de mais moderno no ecossistema .NET e Web.
+          </p>
+        </div>
 
-                    <div className="flex flex-col lg:flex-row gap-8 w-full">
-                        <div className='mb-8 w-full'>
-                            <h2 className='text-xl border-b pb-2'>Frontend</h2>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-                                {
-                                    frontendTechs.map((tech) => (
-                                        <TechCard key={tech.name} name={tech.name} icon={tech.icon} color={tech.color}/>
-                                    ))
-                                }
-                            </div>
+        {/* Grid Principal de Categorias */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          {/* Lado Esquerdo: Frontend & Libs */}
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
+                <span className="h-px w-8 bg-blue-500"></span> Frontend
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {frontendTechs.map((tech) => (
+                  <TechCard key={tech.name} {...tech} />
+                ))}
+              </div>
+            </div>
 
-                            <h2 className='text-xl border-b pb-2'>Frameworks & Bibliotecas</h2>
+            <div>
+              <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
+                <span className="h-px w-8 bg-purple-500"></span> Frameworks & Bibliotecas
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {frameworksLibTechs.map((tech) => (
+                  <TechCard key={tech.name} {...tech} />
+                ))}
+              </div>
+            </div>
+          </div>
 
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-                                {
-                                    frameworksLibTechs.map((tech) => (
-                                        <TechCard key={tech.name} name={tech.name} icon={tech.icon} color={tech.color}/>
-                                    ))
-                                }
-                            </div>
-                        </div>
+          {/* Lado Direito: Backend & DevOps */}
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
+                <span className="h-px w-8 bg-green-500"></span> Backend
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {backendTechs.map((tech) => (
+                  <TechCard key={tech.name} {...tech} />
+                ))}
+              </div>
+            </div>
 
-                        <div className="mb-8 w-full">
-                            <h2 className="text-xl border-b pb-2">Backend</h2>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                                {
-                                    backendTechs.map((tech) => (
-                                        <TechCard key={tech.name} name={tech.name} icon={tech.icon} color={tech.color}/>              
-                                    ))
-                                }
-                            </div>
-                            
-                            <h2 className="text-xl border-b pb-2">DevOps & Ferramentas</h2>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mt-8">
-                                {
-                                    devopsTechs.map((tech) =>(
-                                        <TechCard key={tech.name} name={tech.name} icon={tech.icon} color={tech.color}/>
-                                    ))
-                                }
-                            </div>
-                        </div>
+            <div>
+              <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
+                <span className="h-px w-8 bg-orange-500"></span> DevOps & Ferramentas
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {devopsTechs.map((tech) => (
+                  <TechCard key={tech.name} {...tech} />
+                ))}
+              </div>
+            </div>
+          </div>
 
-                    </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-                </div>
-            </section>
-
-        </>
-    )
-} 
 export default Tecnologies;
